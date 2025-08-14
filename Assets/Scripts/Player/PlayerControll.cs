@@ -74,6 +74,13 @@ public class PlayerControll : MonoBehaviour
         Vector2 pos = new Vector2(horizontal, vertical).normalized;
         // Rigidbody2D를 이용해 moveSpeed만큼의 속도로 움직이게 한다.
         rigid.linearVelocity = pos * moveSpeed;
+
+        // Vector3타입의 지역변수를 선언후
+        Vector3 position = transform.position;
+        // Mathf.Clamp를 이용해 최소 최대 이동 범위를 지정한다.
+        position.x = Mathf.Clamp(position.x, -9f, 9f);
+        position.y = Mathf.Clamp(position.y, -5f, 5f);
+        transform.position = position;
     }
 
     /// <summary>
