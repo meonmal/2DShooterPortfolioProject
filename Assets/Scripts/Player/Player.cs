@@ -7,12 +7,6 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     /// <summary>
-    /// 플레이어의 체력
-    /// </summary>
-    [SerializeField]
-    private float playerHP;
-
-    /// <summary>
     /// 플레이어의 리지드바디2D
     /// </summary>
     private Rigidbody2D rigid;
@@ -28,10 +22,11 @@ public class Player : MonoBehaviour
         // 닿은 오브젝트의 태그가 Enemy라면 실행
         if (collision.CompareTag("Enemy"))
         {
+            PlayerState playerState = GetComponent<PlayerState>();
             // 플레이어의 체력 1 감소
-            playerHP--;
+            playerState.CurrentHP--;
             // 플레이어의 체력이 0과 같거나 이하라면 실행
-            if(playerHP <= 0)
+            if(playerState.CurrentHP <= 0)
             {
                 // 사망처리
                 Debug.Log("플레이어 사망");

@@ -97,8 +97,10 @@ public class PlayerControll : MonoBehaviour
         // z와 마우스 왼쪽 버튼을 누르고 있으면 실행
         if(Input.GetKey(KeyCode.Z) || Input.GetMouseButton(0))
         {
+            PlayerState playerState = GetComponent<PlayerState>();
             // 총알 소환(총알 프리팹을 소환 위치에, 회전 없이 소환한다.)
-            Instantiate(bulletPrefab, spawnPosition.position, Quaternion.identity);
+            GameObject bullet = Instantiate(bulletPrefab, spawnPosition.position, Quaternion.identity);
+            bullet.GetComponent<PlayerBullet>().SetDamage(playerState.Damage);
 
             // 다음 발사시간 갱신
             nextTime = Time.time + coolTime;
