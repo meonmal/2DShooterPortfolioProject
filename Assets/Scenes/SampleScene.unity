@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 151985456}
   - component: {fileID: 151985457}
+  - component: {fileID: 151985458}
   m_Layer: 0
   m_Name: GameObject (1)
   m_TagString: Untagged
@@ -197,6 +198,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &151985458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 151985455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc94b9c2ef8a0a542830ed1f0ca21bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyObject
 --- !u!1 &370452342
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,6 +223,7 @@ GameObject:
   - component: {fileID: 370452345}
   - component: {fileID: 370452344}
   - component: {fileID: 370452343}
+  - component: {fileID: 370452348}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -371,6 +385,20 @@ Transform:
   - {fileID: 1992541985}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!114 &370452348
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 370452342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f874821d2d85e242ba38b7087eaa7c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Player
+  playerHP: 5
+  playerDamage: 2
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1417491184}
   - component: {fileID: 1417491185}
+  - component: {fileID: 1417491186}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -891,6 +920,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1417491186
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417491183}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc94b9c2ef8a0a542830ed1f0ca21bde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::DestroyObject
 --- !u!1 &1506781143
 GameObject:
   m_ObjectHideFlags: 0
